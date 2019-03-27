@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reviews</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+</head>
+<body style="background-image: url('static/img/post2.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12" align="center">
+          {% block body %}
+          {% if result %}
+          <h1>Twitter Sentiment Analysis on Movies</h1>
+          <img src='data:image/png;base64,{{ result }}' width="500" />
+          {% endif %}
+<!--           {% if result %}
+          <img src="data:image/png;base64,{{ result }}" alt="returned" width="500">
+          <p>  {{ result }}</p>
+          {% endif %} -->
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" align="center">
+      <!-- <form method="POST">
+          <p>Do you want to train the data?<input type="text" name="question" required></p>
+          <p><input type="submit"></p> -->
+
+      {% if p %}
+      {% for message in p %}
+      <strong> {{ message }} </strong>
+          {% endfor %}
+      {% endif %}
+      
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

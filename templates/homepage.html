@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Mainpage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/coming-soon.min.css" rel="stylesheet">
+    <style type="text/css">
+      #myVideo {
+            position: fixed;
+              right: 0;
+               bottom: 0;
+               max-width: 100%
+              /*min-width: 50%; 
+             min-height: 50%;*/
+      }
+    </style>
+
+  </head>
+   <header style="width: 100%">
+  </header>
+  <body>
+    <div style="background-color: green">
+    <video autoplay muted loop id="myVideo">
+                     <source src="static/mp4/bg.mp4" type="video/mp4">
+    </video>
+    </div>
+    <div class="overlay"></div>
+    <div class="masthead">
+      <div class="masthead-bg" style="background-color:rgba(0,0,0,0.75);">
+      </div>
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-12 my-auto" >
+            <div class="masthead-content text-white py-5 py-md-0">
+              <h1 class="mb-3">Hello everyone!</h1>
+              <p class="mb-5">Please enter the name of a
+                <strong>Movie</strong>! to know the review</p>
+                <form method="POST" action="/test">
+              <div class="input-group input-group-newsletter">
+                <input type="text" class="form-control" placeholder="Enter movie name..." aria-label="Enter movie name..." aria-describedby="basic-addon" name="mname" required>
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="submit">Get review</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="static/vendor/vide/jquery.vide.min.js"></script>
+
+
+    <script src="static/js/coming-soon.min.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reviews</title>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+        <p> THIS IS TEST 2</p>
+          <form method="POST">
+          <p>Movie Name:<input type="text" name="mname" required></p>
+          <p><input type="submit"></p>
+          {% block body %}
+          {% if result %}
+
+        <p>  {{ result }}</p>
+  <img src="data:image/png;base64,{{ result }}" width="500">
+      {% endif %}
+{% endblock %}
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- <form method="POST">
+          <p>Do you want to train the data?<input type="text" name="question" required></p>
+          <p><input type="submit"></p> -->
+      
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
